@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="referrer" content="no-referrer">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/audioCss.css">
+	<link rel="stylesheet" type="text/css" href="css/dist/css/bootstrap.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="music-left">
+			<audio src="" ></audio>
+			<div class="music-info">
+			<p class="music-name"><span class="Mname">小幸运</span></p>
+			<p class="singer"><span class="Sname">田馥甄</span></p>
+			</div>
+			<div class="channel-info">
+				<div class="current-channel">channel：<span class="channel" data-id=""></span></div>
+				<div class="next-channel"><span class="glyphicon glyphicon-forward NextChannel"></span></div>
+			</div>
+			<div class="music-action">
+				<div class="action-left">
+					<span class="time">00:00</span>
+					<div class="voice">
+						<span class="glyphicon glyphicon-volume-up volume"></span>
+					    <div class="action-progress">
+					    	<div class="line" style="width: 100%"></div>
+					    </div>
+					</div>
+				</div>
+				<div class="action-right">
+					<ul class="icon-list">
+						<li><span class="glyphicon glyphicon-align-justify"></span></li>
+						<li><span class="glyphicon glyphicon-refresh"></span></li>
+						<li><span class="glyphicon glyphicon-share"></span></li>
+					</ul>
+				</div>	
+			</div>
+			<div class="wrap-line">
+				<div class="time-line">
+					<div class="time-process" style="width: 0%"></div>
+				</div>
+			</div>
+			<div class="action-bottom">
+				<div class="bottom-left">
+					<span class="glyphicon glyphicon-heart"></span>
+					<span class="glyphicon glyphicon-trash btn-trash"></span>
+				</div>
+				<div class="bottom-right">
+					<span class="glyphicon glyphicon-play btn-play"></span>
+					<span class="glyphicon glyphicon-step-forward btn-forward"></span>
+				</div>
+			</div>
+		</div>
+		<div class="music-right">
+			<div class="music-Photo">
+			</div>
+		</div>
+	</div>
+	<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+        aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+        <span class="sr-only">40% 完成</span>
+    </div>
+</div>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/musicJS.js"></script>
+</body>
+</html>

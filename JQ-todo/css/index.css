@@ -1,0 +1,157 @@
+*{
+	box-sizing: border-box;
+}
+html,body{	
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box;
+}
+body{
+	background-color:rgba(132, 112, 18, 0.72);
+}
+.container{
+	width: 100%;
+	min-height: 500px;
+	margin:0 auto;
+	position: relative;
+	padding: 3% 15%;
+}
+.title{
+	margin: 0;
+	line-height: 50px;
+}
+.container > h1{
+	text-align: center;
+}
+.task-list{
+	margin: 5px 0;
+}
+input[type=text],input[type=date] {
+	display: block;
+	width: 100%;
+}
+input , .task-item, button ,textarea{
+	padding: 10px;
+	border-radius: 3px;
+	border: 0;
+}
+button{
+	display: inline-block;
+	border: 0;
+	cursor: pointer;
+}
+.add-task  input[type=text]{
+     width: 84%;
+     float: left;
+     margin-right: 1%;
+}
+.add-task [type=submit]{
+	width: 15%;
+}
+.task-item{
+	padding: 10px;
+	background:#fff;
+	color: #333;
+	margin-bottom: 2px;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5);
+	cursor:pointer;
+	transition: background-color .1s
+}
+.task-item:hover{
+	background-color: #ddd;
+}
+.task-detail, .task-detail-mask{
+	position: fixed;
+	border-radius: 4px;
+	display: none;
+}
+.task-detail{
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	height: 300px;
+	color: #333;
+	background-color: #fff;
+	padding: 10px;
+	z-index: 1;
+}
+.task-detail-mask{
+   bottom: 0;
+   left: 0;
+   right: 0;
+   top: 0;
+   background-color: rgba(30,30,30,.5);
+}
+.content{
+	padding: 10px;
+	font-weight: 700;
+}
+textarea{
+	width: 100%;
+	height: 100px;
+	background-color: rgba(155,155,155,.5);
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+/* .remind{
+	background-color: rgba(100,100,100,.5);
+} */
+input[type=date]{
+	background-color: rgba(100,100,100,.1);
+	margin-bottom: 10px;
+}
+.action{
+	font-size: 80%;
+	float: right;
+	color: #999;
+	margin-left:10px; 
+}
+.action:hover{
+	color: #000;
+}
+ .task-item.complete{
+ background-color:rgba(255, 255, 255, .8);
+ color: gray;
+} 
+.task-item.complete::after{
+    width: 99%;
+    float: right;
+    height:1px;
+    content: "";
+    display: block;
+    background-color: rgba(0,0,0,1);
+    position: relative;
+    top: -9px;
+}
+.datetime{
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.remind_info{
+	padding: 10px;
+	width: 100%;
+	min-height: 40px;
+	text-align: center;
+	position: fixed;
+	background:rgb(255, 202, 0);
+	z-index: 1;
+    display: none; 
+}
+.remind_info > button{
+	padding: 0;
+	font-weight: 700;
+	background-color: rgba(255,255,255,1);
+	position: absolute;
+	right: 10px;
+	width:73px;
+	height: 31px;
+	top: 50%;
+	transform: translateY(-16px);
+    cursor: pointer;
+}
+.remind_text{
+	width: 100%;
+	min-height:20px;
+	text-align: center;
+}

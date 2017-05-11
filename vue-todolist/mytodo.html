@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/todo.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+</head>
+<body>
+	<div class="container" id="app">
+	   <section class="wrap">
+	 <h1 class="title">vue-todos</h1>
+	   	 <div class="main-content">
+	   	       <div class="wrap-import" v-cloak>
+	   	        <span class="shrink icon-arrow-down" 
+	   	         v-on:click="allChecked" v-bind:class="{allComp:all}">
+				 </span>
+	   	 	    <input type="text" v-model="content" v-on:keyup.enter="addData" placeholder="请输入文本" 
+	   	 	    autofocus autocomplete="off" class="input-content">
+	   	 	   </div>
+	   	 	 <ul class="wrap-record" v-cloak>
+	   	 	 	<li class="record" v-for="(todo , index) in filterTodo" v-bind:key="todo.id">
+	   	 	 	<span class="sign icon-checkbox-checked" v-on:click="checked(index)" 
+	   	 	 	 v-bind:class="{completed:todo.completed }"></span>
+	   	 	 	   <p class="record-data" v-bind:class="{doneLine:todo.completed}" 
+	   	 	 	   v-on:dblclick="edit(todo)"> {{ todo.data }} </p>
+	   	 	 	   <input type="text" class="edit" v-model="todo.data" v-on:blur="doneEdit(todo)"
+	   	 	 	   v-bind:class="{dblDisplay:todo === editing}" v-autofocus="todo === editing">
+				<span class="cancel icon-cancel-circle" v-on:click="remove(todo)"></span>
+	   	 	 	</li>
+	   	 	 </ul>
+	   	 	 <div class="action-gather" v-cloak>
+	   	 	 <div class="action-one"><span class="number">{{ remaining }}</span><span>{{ remaining | add_s}} left</span></div>
+	   	 	 <div class="action-tow">
+                 <a href="#/all" class="option-all">All</a>
+		   	 	 <a href="#/active" class="option-active">Active</a>
+		   	 	 <a href="#completed"  class="option-compelete">Compelete</a>
+	   	 	 </div>
+	   	 	    <div class="action-three">
+	   	 	 <span class="clear-all" v-on:click="removeAllcom">Clear Compelete</span>
+	   	 	    </div>
+	   	 	 </div>
+	   	 </div>
+	   </section>
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="js/todo.js"></script>
+</body>
+</html>
