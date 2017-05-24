@@ -1,0 +1,19 @@
+//网络状态
+const NET_STATUS = 'NET_STATUS';
+
+//加载中的状态 
+const LOADING_FLAG = 'LOADING_FLAG';
+
+//获取初始数据
+const HOME_DATA = 'HOME_DATA';
+
+//当前浏览电影条目
+const CURRENT_MOVIE = 'CURRENT_MOVIE';
+
+//获取标签页数据
+const CURRENT_TAG = 'CURRENT_TAG';
+
+//首页查看更多
+const CURRENT_SEE_MORE = 'CURRENT_SEE_MORE'
+
+export {NET_STATUS, LOADING_FLAG, HOME_DATA, CURRENT_MOVIE, CURRENT_TAG, CURRENT_SEE_MORE}
