@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>vue-douban</title><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><link href=/static/css/app.8a97558076217f41a545fecdb097bda8.css rel=stylesheet></head><body><div id=app></div><script>(function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'onorientationchange' in window ? 'onorientationchange' : 'resize',
+            
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px'; 
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);</script><script type=text/javascript src=/static/js/manifest.e30702c2842cacd35b1c.js></script><script type=text/javascript src=/static/js/vendor.ad973186f4ef0a3a0810.js></script><script type=text/javascript src=/static/js/app.668fb7f775038150eb7a.js></script></body></html>
